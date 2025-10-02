@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sun E-Sevai Maiyam – Sriramapuram</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f9fafb;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, #ff7e5f, #feb47b);
+      color: #fff;
+      padding: 25px 15px;
+      text-align: center;
+    }
+    header img {
+      max-width: 120px;
+      height: auto;
+      display: block;
+      margin: 0 auto 10px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #333;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px;
+      display: block;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background: #ff6600;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 {
+      text-align: center;
+      color: #ff6600;
+      margin-bottom: 20px;
+    }
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+    .card:hover {
+      transform: translateY(-3px);
+      transition: 0.3s;
+    }
+
+    .about-section {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .about-section h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      margin: 20px 0;
+    }
+
+    .video-container video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card h3 {
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+
+    .card i {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+
+    .card ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+      text-align: left;
+    }
+
+    .card ul li {
+      margin: 6px 0;
+    }
+
+    .cert { background: linear-gradient(135deg, #6a11cb, #2575fc); color: #fff; }
+    .ration { background: linear-gradient(135deg, #ff9966, #ff5e62); color: #fff; }
+    .land { background: linear-gradient(135deg, #56ab2f, #a8e063); color: #fff; }
+    .idapp { background: linear-gradient(135deg, #f7971e, #ffd200); color: #fff; }
+    .exam { background: linear-gradient(135deg, #11998e, #38ef7d); color: #fff; }
+    .cert ul li, .ration ul li, .land ul li, .idapp ul li, .exam ul li { color: #fff; }
+
+    #contact .card > div {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      text-align: left;
+    }
+
+    .card1 {
+      max-width: 520px;
+      margin: 0 auto;
+      background: white;
+      padding: 18px;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
+
+    h2 { margin-top: 0; font-size: 20px; }
+    label { display: block; margin: 10px 0 4px; font-weight: 600; }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+    button {
+      margin-top: 12px;
+      padding: 10px 14px;
+      border: 0;
+      background: #25D366;
+      color: #fff;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    #contact .card a {
+      display: inline-block;
+      background: #ff6600;
+      color: #fff !important;
+      padding: 10px 16px;
+      margin: 6px 0;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    #contact .card a i {
+      margin-right: 8px;
+    }
+
+    #contact .card a:hover {
+      background: #e05500;
+    }
+
+    footer {
+      background: #222;
+      color: #eee;
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+
+      nav a {
+        padding: 10px;
+        font-size: 14px;
+      }
+
+      #contact .card > div {
+        grid-template-columns: 1fr;
+      }
+
+      .card1 {
+        margin: 10px;
+        padding: 16px;
+      }
+
+      button {
+        width: 100%;
+        font-size: 16px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .card, .card1 {
+        padding: 16px;
+      }
+
+      input, select, textarea {
+        font-size: 16px;
+      }
+
+      .about-img img {
+        width: 95%; /* make image shrink slightly for mobile */
+      }
+    }
+
+    /* About Image Styling */
+    .about-img {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .about-img img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <img src="logo1.png" alt="Logo">
+    <h1>🌟 Sun E-Sevai Maiyam – Sriramapuram</h1>
+    <p>Fast • Reliable • Hassle-Free Government Services</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+    <a href="#CustomerEnquiry">CustomerEnquiry</a>
+  </nav>
+
+  <!-- Home -->
+  <section id="home">
+    <h2>Welcome / வரவேற்பு</h2>
+    <p style="text-align:center;">We provide fast and reliable government-related services for the people of <b>Sriramapuram</b>.<br>
+    எங்கள் மையத்தில் அரசு தொடர்பான சேவைகள் விரைவாகவும் நம்பகமாகவும் வழங்கப்படுகின்றன.</p>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Us / எங்களை பற்றி</h2>
+    <div class="card" style="text-align:left;">
+      <h3 style="color:#ff6600;"><i class="fa-solid fa-building-columns"></i> Who We Are / நாங்கள் யார்?</h3>
+      <p><strong>Sun E-Sevai Maiyam</strong> has been proudly serving <b>Sriramapuram</b> for <b>3+ years</b>.</p>
+      <p><b>3 ஆண்டுகளாக</b> ஸ்ரீராமபுரம் மக்களுக்கு நம்பகமான அரசு தொடர்பான சேவைகளை வழங்கி வருகிறோம்.</p>
+
+      <h3 style="color:#ff6600;"><i class="fa-solid fa-bullseye"></i> Our Mission / எங்கள் நோக்கம்</h3>
+      <p>✔️ Fast, hassle-free, and transparent services.<br>
+      ✔️ Bridge the gap between people & government offices.<br>
+      ✔️ Save your valuable time & effort.</p>
+      <p>✔️ விரைவான, சிரமமில்லாத மற்றும் வெளிப்படையான சேவைகள்.<br>
+      ✔️ மக்களுக்கும் அரசு அலுவலகங்களுக்கும் இடையிலான இடைவெளியை குறைப்பது.<br>
+      ✔️ உங்கள் நேரத்தையும் முயற்சியையும் சேமிப்பது.</p>
+
+      <h3 style="color:#ff6600;"><i class="fa-solid fa-people-group"></i> Our Journey / எங்கள் பயணம்</h3>
+      <div class="about-img">
+        <img src="2.jpg" alt="Our Journey Image">
+      </div>
+
+      <ul>
+        <li>🌟 <b>2023 – நிறுவப்பட்டது</b> (A.ராஜா மாமா அவர்களின் ஆசியுடன்)</li>
+        <li>🤝 மக்களிடம் வலுவான நம்பிக்கை</li>
+        <li>🏆 இன்று, ஸ்ரீராமபுரத்தில் மிக நம்பகமான சேவை மையம்</li>
+      </ul>
+
+      <h3 style="color:#ff6600;"><i class="fa-solid fa-user-tie"></i> Founder / நிறுவனர்</h3>
+      <p><b>👨‍💼 Name / பெயர்:</b> Syed Abuthahir.S<br>
+         <b>📅 Established / தொடங்கப்பட்டது:</b> 17 September 2023</p>
+    </div>
+  </section>
+ <!-- Services -->
+  <section id="services">
+    <h2>Our Services / எங்கள் சேவைகள்</h2>
+    <div class="services-grid">
+      <div class="card cert">
+        <i class="fa-solid fa-file-circle-check"></i>
+        <h3>Certificates / சான்றிதழ்கள்</h3>
+        <ul>
+          <li>Birth / Death Certificate</li>
+          <li>Income / Community / Nativity</li>
+          <li>Legal Heirship</li>
+          <li>First Graduate</li>
+          <li>Ration Card Smart Card</li>
+        </ul>
+      </div>
+
+      <div class="card ration">
+        <i class="fa-solid fa-id-card"></i>
+        <h3>Ration Card / ரேஷன் கார்டு</h3>
+        <ul>
+          <li>New Smart Card Apply</li>
+          <li>Correction / Update</li>
+          <li>Member Add / Remove</li>
+        </ul>
+      </div>
+
+      <div class="card land">
+        <i class="fa-solid fa-landmark"></i>
+        <h3>Land Records / நில தகவல்</h3>
+        <ul>
+          <li>Patta</li>
+          <li>Chitta</li>
+          <li>Adangal</li>
+        </ul>
+      </div>
+
+      <div class="card idapp">
+        <i class="fa-solid fa-passport"></i>
+        <h3>ID & Applications / அடையாளம் & விண்ணப்பங்கள்</h3>
+        <ul>
+          <li>Voter ID Apply</li>
+          <li>PAN Card</li>
+          <li>Passport</li>
+        </ul>
+      </div>
+
+      <div class="card exam">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <h3>Exam Services / தேர்வு சேவைகள்</h3>
+        <ul>
+          <li>TNPSC Applications</li>
+          <li>Police Exam Apply</li>
+          <li>Hall Ticket Download</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+   <!-- Contact -->
+  <section id="contact">
+    <h2>📞 Contact Us / தொடர்புக்கு</h2>
+    <div class="card" style="padding:30px;">
+      <div>
+
+        <div>
+          <p><i class="fa-solid fa-location-dot"></i> 
+            <b>📍 முகவரி / Address:</b><br>
+            Shop No 10, Anna Complex, <br> Sriramapuram
+          </p>
+        </div>
+
+        <div>
+          <p><i class="fa-solid fa-phone"></i> 
+            <b>📞 தொலைபேசி / Phone:</b><br>
+            <a href="tel:+918148076831"><i class="fa-solid fa-phone"></i> 8148076831</a><br>
+            <a href="tel:+918148176831"><i class="fa-solid fa-phone"></i> 8148176831</a>
+          </p>
+        </div>
+
+        <div>
+          <p><i class="fab fa-whatsapp"></i> 
+            <b>📱 வாட்ஸ்அப் / WhatsApp:</b><br>
+            <a href="https://wa.me/918148076831" target="_blank"><i class="fab fa-whatsapp"></i> Chat 8148076831</a><br>
+            <a href="https://wa.me/918148176831" target="_blank"><i class="fab fa-whatsapp"></i> Chat 8148176831</a>
+          </p>
+        </div>
+
+        <div>
+          <p><i class="fa-solid fa-envelope"></i> 
+            <b>📧 மின்னஞ்சல் / Email:</b><br>
+            <a href="mailto:sunesevai786@gmail.com"><i class="fa-solid fa-envelope"></i> sunesevai786@gmail.com</a>
+          </p>
+        </div>
+
+        <div>
+          <p><i class="fa-brands fa-facebook"></i> 
+            <b>📘 பேஸ்புக் / Facebook:</b><br>
+            <a href="https://facebook.com/sunesevai" target="_blank"><i class="fa-brands fa-facebook"></i> facebook.com/sunesevai</a>
+          </p>
+        </div>
+
+        <div>
+          <p><i class="fa-brands fa-instagram"></i> 
+            <b>📸 இன்ஸ்டாகிராம் / Instagram:</b><br>
+            <a href="https://instagram.com/sunesevai2915" target="_blank"><i class="fa-brands fa-instagram"></i> @sunesevai2915</a>
+          </p>
+        </div>
+
+        <div>
+          <p><i class="fa-brands fa-youtube"></i> 
+            <b>▶️ யூடியூப் / YouTube:</b><br>
+            <a href="https://youtube.com/@sunesevai-maiyam?si=2xcmccDXZelEnQKq" target="_blank"><i class="fa-brands fa-youtube"></i> Sun E-Sevai Maiyam Channel</a>
+          </p>
+        </div>
+
+        <div>
+          <p><i class="fa-solid fa-map"></i> 
+            <b>📍 இடம் / Location:</b><br>
+            <a href="https://share.google/q3pSYYjIoik6Mbkov" target="_blank"><i class="fa-solid fa-map-location-dot"></i> View on Google Maps</a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Enquiry -->
+  <section id="CustomerEnquiry">
+    <div class="card1">
+      <h2>வாடிக்கையாளர் பதிவு | Customer Enquiry</h2>
+      <form id="leadForm">
+        <label for="name">பெயர் (Name)</label>
+        <input id="name" name="name" type="text" placeholder="உங்கள் பெயர்" required />
+
+        <label for="phone">மொபைல் / WhatsApp (Mobile / WhatsApp)</label>
+        <input id="phone" name="phone" type="tel" placeholder="9876543210" required />
+
+        <label for="service">சேவை (Service Name)</label>
+        <select id="service" name="service" required>
+          <option value="">-- தேர்வு செய்க --</option>
+          <option>Certificate Services</option>
+          <option>Printing / Xerox</option>
+          <option>Government Services</option>
+          <option>Exam Services</option>
+          <option>Other</option>
+        </select>
+
+        <label for="email">Gmail / Email (optional)</label>
+        <input id="email" name="email" type="email" placeholder="example@gmail.com" />
+
+        <label for="note">குறிப்பு (Note / Optional)</label>
+        <textarea id="note" name="note" rows="3" placeholder="அதிக விவரம் (optional)"></textarea>
+
+        <button type="submit">Send to WhatsApp</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Best Regards,<br><b>Sun E-Sevai Maiyam – Sriramapuram</b><br>Owner: Syed Abuthahir.S</p>
+  </footer>
+
+  <!-- WhatsApp Script -->
+  <script>
+    const MY_WHATSAPP_NUMBER = "918148176831";
+
+    function escapeForWhatsApp(text) {
+      return encodeURIComponent(text).replace(/%0A/g, "%0A");
+    }
+
+    document.getElementById('leadForm').addEventListener('submit', function(e){
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const service = document.getElementById('service').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const note = document.getElementById('note').value.trim();
+
+      let msg =
+`New Enquiry from Website:
+Name: ${name}
+Mobile/WhatsApp: ${phone}
+Service: ${service}
+Email: ${email || "Not provided"}
+Note: ${note || "—"}`;
+
+      const wa_url = `https://wa.me/${MY_WHATSAPP_NUMBER}?text=${escapeForWhatsApp(msg)}`;
+      window.open(wa_url, '_blank');
+    });
+  </script>
+  <!-- Services -->
+  <!-- (rest of your services, contact, enquiry, and script remain the same) -->
+  
+</body>
+</html>
